@@ -206,7 +206,10 @@ async function getWeather(lang, city) {
 
 btnSelect.addEventListener('click' , () => {
 
-  if(input.value) {
+  const checkCity = /[a-zA-Zа-яёА-ЯЁ]/.test(input.value);
+
+
+  if(input.value && checkCity) {
     city = input.value;
     /[а-яёА-ЯЁ]/.test(input.value) ? lang = 'ru' : lang = 'en';
     lang == 'ru' ? btnLang.textContent = 'ru': btnLang.textContent = 'en'; 
