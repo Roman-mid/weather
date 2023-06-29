@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <!-- <div class="weather__icon"> </div> -->
+
+  <div class="container">
+    
+    <button class="btn-lang btn" type="button">en</button>
+
+    <button class="btn btn-today color-active" type="button">Today</button>
+    <div class="btns">
+      <button class="btns__day btn" type="button"></button>
+      <button class="btns__day btn" type="button"></button>
+      <button class="btns__day btn" type="button"></button>
+      <button class="btns__day btn" type="button"></button>
+    </div>
+    <h2 class="city"></h2>
+
+    <div class="weather__icon">
+      <img src="" alt="">
+    </div>
+
+    <div class="weather weather_today active">
+      <div class="weather__block">
+        <span class="weather__name-block"></span>
+        <span class="weather__sort"></span>
+      </div>
+      <div class="weather__block">
+        <span class="weather__name-block"></span>
+        <span class="weather__degry"></span>
+      </div>
+      <div class="weather__block">
+        <span class="weather__name-block"></span>
+        <!-- <img src="" alt="" class="weater__icon"> -->
+        <span class="weather__wind-speed"></span>
+      </div>
+      <div class="weather__block">
+        <span class="weather__name-block"></span>
+        <span class="weather__humidity"></span>
+      </div>
+      <div class="weather__block">
+        <span class="weather__name-block"></span>
+        <span class="weather__rain"></span>
+      </div>
+      <div class="weather__block">
+        <span class="weather__name-block"></span>
+        <span class="weather__snow"></span>
+      </div>
+    </div>
+
+    <div class="weather-next weather"></div>
+    <div class="weather-next weather"></div>
+    <div class="weather-next weather"></div>
+    <div class="weather-next weather"></div>
+    
+    <!-- <div class="day__info">
+      <span class="day__desc"></span>
+      <div class="day__block">
+        <span class="day__name-block"></span>
+        <span class="day__sort"></span>
+      </div>
+    </div> -->
+
+    <div class="select">
+      <button class="btn select__my-city" type="button">My city</button>
+      <input type="text" class="select__input" placeholder="city">
+      <button class="btn select__city" type="button">Select</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
