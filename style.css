@@ -40,16 +40,16 @@ img {
 
 .btn-lang {
   position: absolute;
-  right: 10px;
-  top: 72px;
-  width: 30px;
+  right: 0;
+  top: 78px;
+  width: 35px;
   display: block;
 }
 
 .btn {
   border: 1px solid #258e9e;
   cursor: pointer;
-  padding: 5px 0;
+  padding: 8px 0;
   background: none;
 }
 
@@ -74,16 +74,13 @@ img {
 }
 
 
-
 .weather {
   width: 100%;
   padding: 0 10px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  /* flex: 1 1 auto; */
   display: none;
-  min-height: 281px;
 }
 
 .weather__block {
@@ -101,9 +98,10 @@ img {
 }
 
 .weather__icon {
-  height: 125px;
-  width: 100px;
-  width: 50%;
+  height: 154px;
+  /* height: 125px; */
+  /* width: 100px; */
+  width: 70%;
   overflow: hidden;
   display: flex;
   align-items: center;
