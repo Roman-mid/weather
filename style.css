@@ -25,6 +25,7 @@ img {
   display: block;
   object-fit: cover;
 }
+
 .container {
   width: 100%;
   display: flex;
@@ -36,7 +37,6 @@ img {
   padding-bottom: 10px;
   position: relative;
 }
-
 
 .btn-lang {
   position: absolute;
@@ -78,11 +78,12 @@ img {
 .weather {
   width: 100%;
   padding: 0 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   /* flex: 1 1 auto; */
   display: none;
+  min-height: 281px;
 }
 
 .weather__block {
@@ -97,7 +98,6 @@ img {
   border: 1px solid hsl(188, 62%, 38%, 0.5);
   border-bottom: none;
   border-top: none;
-
 }
 
 .weather__icon {
