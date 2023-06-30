@@ -118,7 +118,7 @@ async function getWeather(lang, city) {
     month < 9 ? month = '0' + month : month = month;
     date < 9 ? date = '0' + date : date = date;
     
-    const arrDaysEn = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+    const arrDaysEn = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const arrDaysRu = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 
     lang == 'en' ? btnDays[j].textContent = arrDaysEn[day] : btnDays[j].textContent = arrDaysRu[day];
