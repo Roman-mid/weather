@@ -27,6 +27,7 @@ img {
 }
 
 .container {
+  max-width: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -98,10 +99,10 @@ img {
 }
 
 .weather__icon {
-  height: 154px;
-  /* height: 125px; */
-  /* width: 100px; */
-  width: 70%;
+  /* height: 154px; */
+  height: 180px;
+  /* width: 70%; */
+  width: 200px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -111,6 +112,10 @@ img {
 
 .weather__icon img {
   width: 100%;
+}
+
+.weather-next.weather {
+  min-height: 432px;
 }
 
 .day {
