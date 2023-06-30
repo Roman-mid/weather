@@ -42,7 +42,7 @@ img {
 .btn-lang {
   position: absolute;
   right: 0;
-  top: 79px;
+  top: 78px;
   width: 35px;
   display: block;
 }
@@ -115,7 +115,7 @@ img {
 }
 
 .weather-next.weather {
-  min-height: 435px;
+  min-height: 434px;
 }
 
 .day {
