@@ -24,15 +24,20 @@ const key = '8d39974b640672279c1e2a7a2226aff0';
 
 let lang = 'en';
 
+
 async function getCity() {
   const geo = await fetch('https://ipapi.co/json');
   const geoJSON = await geo.json();
   return city = await geoJSON.city;
 };
 
+
 getCity()
-  .then(city => getWeather(lang, city))
+  .then(res => localStorage.setItem('city', res))
+  .then(() => getWeather(lang, localStorage.getItem('city')))
 ;
+
+
 
 async function getWeather(lang, city) {
 
@@ -189,10 +194,7 @@ async function getWeather(lang, city) {
       if(!el.classList.contains('day__active')) {
         console.log(1)
         next.style.maxHeight = null;
-
-        // document.querySelectorAll('.day__info').forEach(el => el.style.maxHeight = null)
       } else {
-        // document.querySelectorAll('.day__info').forEach(el => el.style.maxHeight = null)
         next.style.maxHeight = next.scrollHeight + 'px';
       };
 
@@ -208,7 +210,6 @@ btnSelect.addEventListener('click' , () => {
 
   const checkCity = /[a-zA-Zа-яёА-ЯЁ]/.test(input.value);
 
-
   if(input.value && checkCity) {
     city = input.value;
     /[а-яёА-ЯЁ]/.test(input.value) ? lang = 'ru' : lang = 'en';
@@ -220,9 +221,7 @@ btnSelect.addEventListener('click' , () => {
 });
 
 btnMyCity.addEventListener('click' , () => {
-  getCity()
-    .then(city => getWeather(lang, city))
-  ;
+  getWeather(lang, localStorage.getItem('city'))
 });
 
 
@@ -264,8 +263,7 @@ btnLang.addEventListener('click' , () => {
   };
 
   getWeather(lang, city);
+  
 });
-
-
 
 
