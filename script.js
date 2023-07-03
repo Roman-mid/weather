@@ -24,7 +24,6 @@ const key = '8d39974b640672279c1e2a7a2226aff0';
 
 let lang = 'en';
 
-
 async function getCity() {
   const geo = await fetch('https://ipapi.co/json');
   const geoJSON = await geo.json();
@@ -36,7 +35,6 @@ getCity()
   .then(res => localStorage.setItem('city', res))
   .then(() => getWeather(lang, localStorage.getItem('city')))
 ;
-
 
 
 async function getWeather(lang, city) {
@@ -202,7 +200,6 @@ async function getWeather(lang, city) {
 
   });
 
-
 };
 
 
@@ -221,9 +218,9 @@ btnSelect.addEventListener('click' , () => {
 });
 
 btnMyCity.addEventListener('click' , () => {
-  getWeather(lang, localStorage.getItem('city'))
+  city = localStorage.getItem('city');
+  getWeather(lang, city)
 });
-
 
 btnToday.addEventListener('click' , () => {
 
@@ -249,7 +246,6 @@ btnDays.forEach((btn, ind) => {
     btn.classList.add('active', 'color-active');
   })
 });
-
 
 btnLang.addEventListener('click' , () => {
   btnLang.classList.toggle('active');
